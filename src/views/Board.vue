@@ -12,7 +12,7 @@
       <div class="column flex">
         <input
           type="text"
-          class="p-2 mr-2 flex-grow"
+          class="p-2 shadow rounded flex-grow bg-transparent"
           placeholder="New Column Name"
           v-model="newColumnName"
           @keyup.enter="createColumn"
@@ -58,7 +58,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style>
+.column {
+  @apply bg-grey-light p-2 mr-4 text-left shadow rounded;
+  min-width: 350px;
+}
+
 .board {
   @apply p-4 bg-teal-dark h-full overflow-auto;
 }
